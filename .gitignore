@@ -1,0 +1,31 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
+*.egg
+
+# PyInstaller / Nuitka
+*.exe
+*.so
+*.dylib
+
+# Pygame specific
+*.spec
+*.manifest
+*.ico
+*.bmp
+*.wav
+*.ogg
+*.mp3
+*.ttf
+*.png
+*.jpg
+*.jpeg
+*.gif
