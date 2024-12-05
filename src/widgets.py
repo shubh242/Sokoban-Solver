@@ -27,6 +27,7 @@ def sidebar_widgets(window):
 		
 	)
 
+
 	undo = Button(
 		window, 1055, 130, 130, 40, text='Undo',
 		font=pygame.font.SysFont('Verdana',18,),
@@ -41,15 +42,15 @@ def sidebar_widgets(window):
 		
 	# )
 	visualizer = Label(window, f'Visualize', 1055, 450, 16)
-	toggle = Toggle(window, 1160, 455, 18, 22, handleRadius=11)
+	# toggle = Toggle(window, 1160, 455, 18, 22, handleRadius=11)
 	bfs_button = Button(
-		window, 1055, 280, 130, 40, text='Solve BFS', radius=5,
+		window, 1055, 200, 130, 40, text='Solve BFS', radius=5,
 		font=pygame.font.SysFont('Verdana', 18, bold=True),
 		onClick=lambda: pygame.event.post(pygame.event.Event(SOLVE_BFS_EVENT)),
 		
 	)
 	astarman_button = Button(
-		window, 1055, 340, 130, 40, text='A* Manhattan', radius=5,
+		window, 1055, 280, 130, 40, text='A* Manhattan', radius=5,
 		font=pygame.font.SysFont('Verdana', 14, bold=True),
 		onClick=lambda: pygame.event.post(pygame.event.Event(SOLVE_ASTARMAN_EVENT)),
 		
@@ -80,8 +81,8 @@ def sidebar_widgets(window):
 		'next_button': next_button, 
 		'label': label, 
 		'level_clear': level_clear,
-		'toggle': toggle,
-		'visualizer': visualizer,
+		# 'toggle': toggle,
+		# 'visualizer': visualizer,
 		'bfs': bfs_button,
 		'paths': paths,
 		# 'seedbox': seedbox,

@@ -104,7 +104,7 @@ def play_game(window, level=1,  **widgets):
 				solution, depth = solve_bfs(
 					game.get_matrix(), 
 					widget=widgets['paths'], 
-					visualizer=widgets['toggle'].getValue()
+					# visualizer=widgets['toggle'].getValue()
 				)
 				runtime = round(time.time() - start, 5)
 				if solution:
@@ -130,7 +130,7 @@ def play_game(window, level=1,  **widgets):
 				solution, depth = solve_astar(
 					game.get_matrix(), 
 					widget=widgets['paths'], 
-					visualizer=widgets['toggle'].getValue(),
+					# visualizer=widgets['toggle'].getValue(),
 					heuristic='manhattan',
 				)
 				runtime = round(time.time() - start, 5)
@@ -191,7 +191,7 @@ def play_game(window, level=1,  **widgets):
 		pygame_widgets.update(events)
 		widgets['label'].draw()
 		# widgets['seed'].draw()
-		widgets['visualizer'].draw()
+		# widgets['visualizer'].draw()
 		widgets['moves_label'].set_moves(f' Moves - {moves} ', 20)
 		if show_solution:
 			widgets['paths'].draw()
@@ -233,8 +233,8 @@ def main():
 			pygame.quit()
 			quit()
 		reset = game_data.get('reset', -1)
-		# random_game = game_data.get('random_game', False)
-		# random_seed = game_data.get('random_seed')
+		random_game = game_data.get('random_game', False)
+		random_seed = game_data.get('random_seed')
 		level = reset if reset >= 0 else min(level + 1, 7)
 
 	
